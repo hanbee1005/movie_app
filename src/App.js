@@ -13,7 +13,24 @@ class App extends React.Component {
     this.setState(current => ({ count: current.count - 1 }));
   };
 
+  // component life cycle
+  // mounting
+  componentDidMount() {
+    console.log("component rended");
+  }
+
+  // updating
+  componentDidUpdate() {
+    console.log("I just updated");
+  }
+
+  // unmounting
+  componentWillUnmount() {
+    console.log("Goodbye~!");
+  }
+
   render() {
+    console.log("I'm rendering");
     return <div>
       <h1>The number is {this.state.count}</h1>
       <button onClick={this.add}>Add</button>
